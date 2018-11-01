@@ -1,0 +1,39 @@
+<!-- <input placeholder="Enter username" [(ngModel)]="name">
+<h3>Your name is: {{name}}</h3> -->
+<!-- <input placeholder="Enter username" [(ngModel)]="name">
+<h3 [ngStyle]="name.length %2 === 0 ? evenStyle : oddStyle">Your name is: {{name}}</h3>
+<div [class]="isHighlight ? 'circle':'square'"></div>
+<div [ngClass]="{ square: true }"></div>
+<div *ngIf='isShow'>Kien</div>
+<button (click)="isShow=!isShow">Toggle</button>
+
+<ul>
+  <li *ngFor='let subject of arrSubjects'>
+    <p>{{ subject }}</p>
+  </li>
+</ul>
+<div *ngIf="isShowForm">
+<input placeholder="English"[(ngModel)]="newEn"/>
+<input placeholder="Vietnamese"[(ngModel)]="newVn"/>
+</div>
+<br><br>
+<button (click)='addWord()'>Thêm từ mới</button>
+<button (click)='isShowForm=!isShowForm'>Bật/Tắt Form</button>
+<br><br>
+<select [(ngModel)]='filterStatus'>
+  <option value="Xem_Tat_Ca">Xem tất cả</option>
+  <option value="Xem_Da_Nho">Xem từ đã nhớ</option>
+  <option value="Xem_Chua_Nho">Xem từ chưa nhớ</option>
+</select>
+<div *ngFor='let word of arrWords' >
+  <div class="books" *ngIf="getShowStatus(word.memorized)">
+    <h4 [ngStyle]="{color: word.memorized ? 'green':'red'}">{{word.en}}</h4>
+    <p>{{word.vn}}</p>
+    <button (click)='removeWords(word.id);'>Xóa</button>
+    <button (click)='word.memorized=!word.memorized'>
+      {{ word.memorized ? 'Chưa thuộc' : 'Đã thuộc' }}</button>
+  </div>
+</div> -->
+
+<h3>Tên: {{ names }}</h3>
+<p>Tuổi: {{ age }}</p>
