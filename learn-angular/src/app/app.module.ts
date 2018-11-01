@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { WordComponent } from './word/word.component';
 import { BookComponent } from './book/book.component';
 import { ListPersonComponent } from './list-person/list-person.component';
-import { PersonComponent } from './person/person.component'
+import { PersonComponent } from './person/person.component';
+import { FormComponent } from './form/form.component'
 @NgModule({
   declarations: [
     AppComponent,
     WordComponent,
     BookComponent,
     ListPersonComponent,
-    PersonComponent
+    PersonComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
