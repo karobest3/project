@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-book',
@@ -7,7 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class BookComponent implements OnInit {
   @Input() names: String;
-  @Input() age : Number;
+  @Input() age: Number;
   name = '';
   isHighlight = true;
   evenStyle = { color: 'red', fontSize: '30px' };
@@ -24,7 +24,8 @@ export class BookComponent implements OnInit {
   ];
   newEn = '';
   newVn = '';
-  isShowForm=false;
+  isShowForm = false;
+  filterStatus = 'Xem_Tat_Ca';
   addWord() {
     this.arrWords.unshift({
       id: this.arrWords.length + 1,
@@ -37,15 +38,15 @@ export class BookComponent implements OnInit {
 
   }
 
-  removeWords(id:number){
-    const index=this.arrWords.findIndex(e => e.id=== id);
-    this.arrWords.splice(index,1);
+  removeWords(id: number) {
+    const index = this.arrWords.findIndex(e => e.id === id);
+    this.arrWords.splice(index, 1);
   }
-  filterStatus='Xem_Tat_Ca';
-  getShowStatus(memorized:boolean){
-    const dkXemTatCa=this.filterStatus==='Xem_Tat_Ca';
-    const dkXemDaNho=this.filterStatus==='Xem_Da_Nho' && memorized;
-    const dkXemChuaNho=this.filterStatus==='Xem_Chua_Nho' && !memorized;
+
+  getShowStatus(memorized: boolean) {
+    const dkXemTatCa = this.filterStatus === 'Xem_Tat_Ca';
+    const dkXemDaNho = this.filterStatus === 'Xem_Da_Nho' && memorized;
+    const dkXemChuaNho = this.filterStatus === 'Xem_Chua_Nho' && !memorized;
     return dkXemTatCa || dkXemDaNho || dkXemChuaNho;
   }
   constructor() { }
